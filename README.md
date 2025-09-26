@@ -124,9 +124,8 @@ This project implements a machine learning solution to predict whether a Titanic
 
 ### Utility Scripts
 
-- **Validate dataset**: `python check_dataset_columns.py`
-- **Check model features**: `python check_model_features.py`
-- **Analyze columns**: `python understand_alone_column.py`
+- **Quick generation**: `python quick_generate.py` (rapid model creation)
+- **Column analysis**: `python understand_alone_column.py` (analyze `alone` column)
 
 ### Web Application Features
 
@@ -151,14 +150,11 @@ my_titanic_project/
 ├── requirements.txt              # Project dependencies
 ├── project_report.md            # Comprehensive project report
 ├── main_project.py              # Complete ML pipeline
-├── check_dataset_columns.py     # Dataset column analysis utility
-├── check_model_features.py      # Model feature validation utility
 ├── quick_generate.py            # Quick model generation script
 ├── understand_alone_column.py   # Column analysis utility
 ├── data/                        # Dataset storage
 │   ├── train.csv
-│   ├── test.csv
-│   └── gender_submission.csv
+│   └── test.csv
 ├── models/                      # Trained model files
 │   └── titanic_model.pkl        # Optimized Random Forest model
 ├── reports/                     # Generated reports and visualizations
@@ -170,8 +166,6 @@ my_titanic_project/
 │   ├── flask_app.py             # Flask REST API
 │   └── templates/
 │       └── index.html           # Flask web interface
-├── notebooks/                   # Jupyter notebooks (if needed)
-├── src/                         # Source code utilities
 └── .git/                        # Git version control
 ```
 
@@ -256,18 +250,6 @@ python deployment/flask_app.py
 ```
 
 ## 🔧 Utility Scripts
-
-### check_dataset_columns.py
-Analyzes and validates the original Titanic dataset columns.
-```bash
-python check_dataset_columns.py
-```
-
-### check_model_features.py
-Validates model features and expected input structure.
-```bash
-python check_model_features.py
-```
 
 ### quick_generate.py
 Rapid generation of essential model files without lengthy optimization.

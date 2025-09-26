@@ -22,13 +22,9 @@ my_titanic_project/
 ├── main_project.py              # Complete ML pipeline
 ├── requirements.txt             # Project dependencies
 ├── project_report.md           # This comprehensive report
-├── check_dataset_columns.py    # Dataset column analysis utility
-├── check_model_features.py     # Model feature validation utility
 ├── quick_generate.py           # Quick model generation script
 ├── understand_alone_column.py  # Column analysis utility
 ├── data/                       # Dataset storage
-├── notebooks/                  # Jupyter notebooks (if needed)
-├── src/                        # Source code utilities
 ├── models/                     # Trained model files
 │   └── titanic_model.pkl       # Optimized Random Forest model
 ├── reports/                    # Generated reports and visualizations
@@ -89,37 +85,9 @@ pip install -r requirements.txt
 
 ## 🔧 Utility Scripts
 
-The project includes several utility scripts for data analysis, model validation, and quick generation:
+The project includes utility scripts for rapid model generation and analysis:
 
-### 1. check_dataset_columns.py
-**Purpose**: Analyze and validate the original Titanic dataset columns
-
-**Features**:
-- Lists all available columns in the dataset
-- Checks for specific columns (`alone`, `adult_male`)
-- Displays unique values and value counts
-- Provides sample data for analysis
-
-**Usage**:
-```bash
-python check_dataset_columns.py
-```
-
-### 2. check_model_features.py
-**Purpose**: Validate model features and expected input structure
-
-**Features**:
-- Loads and inspects the trained model
-- Checks model's expected features (`feature_names_in_`)
-- Analyzes feature importances
-- Validates training data structure
-
-**Usage**:
-```bash
-python check_model_features.py
-```
-
-### 3. quick_generate.py
+### 1. quick_generate.py
 **Purpose**: Rapid generation of essential model files without lengthy optimization
 
 **Features**:
@@ -134,7 +102,7 @@ python check_model_features.py
 python quick_generate.py
 ```
 
-### 4. understand_alone_column.py
+### 2. understand_alone_column.py
 **Purpose**: Deep analysis of the `alone` column and its relationships
 
 **Features**:
@@ -149,8 +117,6 @@ python understand_alone_column.py
 ```
 
 ### Utility Script Benefits
-- **Data Validation**: Ensures data integrity and structure
-- **Model Debugging**: Helps identify feature mismatches
 - **Rapid Prototyping**: Quick model generation for testing
 - **Column Analysis**: Deep understanding of feature relationships
 - **Reproducibility**: Standardized analysis workflows
@@ -701,11 +667,9 @@ This Titanic Survival Prediction project demonstrates a complete machine learnin
 1. **Setup Environment**: Install dependencies from `requirements.txt`
 2. **Train Model**: Run `python main_project.py` (full pipeline with optimization)
 3. **Quick Generation**: Run `python quick_generate.py` (rapid model creation)
-4. **Data Analysis**: Run `python check_dataset_columns.py` (validate dataset)
-5. **Model Validation**: Run `python check_model_features.py` (check model features)
-6. **Column Analysis**: Run `python understand_alone_column.py` (analyze `alone` column)
-7. **Streamlit App**: Run `streamlit run deployment/streamlit_app.py`
-8. **Flask App**: Run `python deployment/flask_app.py`
+4. **Column Analysis**: Run `python understand_alone_column.py` (analyze `alone` column)
+5. **Streamlit App**: Run `streamlit run deployment/streamlit_app.py`
+6. **Flask App**: Run `python deployment/flask_app.py`
 
 ### Technical Support
 - **Python Version**: 3.8+ recommended
