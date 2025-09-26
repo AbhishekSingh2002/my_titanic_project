@@ -22,6 +22,10 @@ my_titanic_project/
 ├── main_project.py              # Complete ML pipeline
 ├── requirements.txt             # Project dependencies
 ├── project_report.md           # This comprehensive report
+├── check_dataset_columns.py    # Dataset column analysis utility
+├── check_model_features.py     # Model feature validation utility
+├── quick_generate.py           # Quick model generation script
+├── understand_alone_column.py  # Column analysis utility
 ├── data/                       # Dataset storage
 ├── notebooks/                  # Jupyter notebooks (if needed)
 ├── src/                        # Source code utilities
@@ -80,6 +84,76 @@ source ml_env/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+---
+
+## 🔧 Utility Scripts
+
+The project includes several utility scripts for data analysis, model validation, and quick generation:
+
+### 1. check_dataset_columns.py
+**Purpose**: Analyze and validate the original Titanic dataset columns
+
+**Features**:
+- Lists all available columns in the dataset
+- Checks for specific columns (`alone`, `adult_male`)
+- Displays unique values and value counts
+- Provides sample data for analysis
+
+**Usage**:
+```bash
+python check_dataset_columns.py
+```
+
+### 2. check_model_features.py
+**Purpose**: Validate model features and expected input structure
+
+**Features**:
+- Loads and inspects the trained model
+- Checks model's expected features (`feature_names_in_`)
+- Analyzes feature importances
+- Validates training data structure
+
+**Usage**:
+```bash
+python check_model_features.py
+```
+
+### 3. quick_generate.py
+**Purpose**: Rapid generation of essential model files without lengthy optimization
+
+**Features**:
+- Creates missing directories and files
+- Performs complete data preprocessing
+- Trains a Random Forest model with default parameters
+- Generates essential visualizations
+- Saves model and reports
+
+**Usage**:
+```bash
+python quick_generate.py
+```
+
+### 4. understand_alone_column.py
+**Purpose**: Deep analysis of the `alone` column and its relationships
+
+**Features**:
+- Analyzes relationship between `alone` and family columns
+- Compares with calculated `is_alone` feature
+- Examines correlation with `adult_male` and `who` columns
+- Provides statistical analysis and sample data
+
+**Usage**:
+```bash
+python understand_alone_column.py
+```
+
+### Utility Script Benefits
+- **Data Validation**: Ensures data integrity and structure
+- **Model Debugging**: Helps identify feature mismatches
+- **Rapid Prototyping**: Quick model generation for testing
+- **Column Analysis**: Deep understanding of feature relationships
+- **Reproducibility**: Standardized analysis workflows
 
 ---
 
@@ -596,16 +670,28 @@ This Titanic Survival Prediction project demonstrates a complete machine learnin
 ### Impact and Applications
 - **Educational Value**: Demonstrates practical ML implementation
 - **Historical Insight**: Provides data-driven understanding of the Titanic disaster
-- **Technical Template**: Serves as a blueprint for similar classification projects
-- **Deployment Example**: Shows how to transition from model to production
+- **Technical Skills**: Covers complete ML pipeline from data to deployment
+- **Reproducible Research**: Well-documented, version-controlled project
 
-The project not only achieves its technical objectives but also provides valuable insights into the historical tragedy while serving as a comprehensive example of modern machine learning practices.
+### Project Status
+- **Version Control**: Git repository initialized and committed
+- **Commit Hash**: `Initial commit: Titanic project with complete ML pipeline`
+- **Repository Status**: All project files under version control
+- **Development Stage**: Production-ready with comprehensive documentation
+
+### Future Enhancements
+- **Advanced Models**: Experiment with XGBoost, LightGBM, or neural networks
+- **Feature Engineering**: Create more sophisticated features
+- **Hyperparameter Optimization**: Use Bayesian optimization or genetic algorithms
+- **Real-time API**: Deploy as a scalable web service
+- **Interactive Dashboard**: Create more sophisticated visualizations
+- **CI/CD Pipeline**: Automated testing and deployment
 
 ---
 
 ## 📞 Contact and Resources
 
-### Project Repository
+{{ ... }}
 - **Location**: `C:\Users\Abhishek Singh\CascadeProjects\my_titanic_project\`
 - **Main Script**: `main_project.py`
 - **Deployment**: `deployment/` folder
@@ -613,9 +699,13 @@ The project not only achieves its technical objectives but also provides valuabl
 
 ### How to Run the Project
 1. **Setup Environment**: Install dependencies from `requirements.txt`
-2. **Train Model**: Run `python main_project.py`
-3. **Streamlit App**: Run `streamlit run deployment/streamlit_app.py`
-4. **Flask App**: Run `python deployment/flask_app.py`
+2. **Train Model**: Run `python main_project.py` (full pipeline with optimization)
+3. **Quick Generation**: Run `python quick_generate.py` (rapid model creation)
+4. **Data Analysis**: Run `python check_dataset_columns.py` (validate dataset)
+5. **Model Validation**: Run `python check_model_features.py` (check model features)
+6. **Column Analysis**: Run `python understand_alone_column.py` (analyze `alone` column)
+7. **Streamlit App**: Run `streamlit run deployment/streamlit_app.py`
+8. **Flask App**: Run `python deployment/flask_app.py`
 
 ### Technical Support
 - **Python Version**: 3.8+ recommended
