@@ -57,7 +57,9 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     try:
-        with open('C:\\Users\\Abhishek Singh\\CascadeProjects\\my_titanic_project\\models\\titanic_model.pkl', 'rb') as f:
+        # Try relative path first (for deployment)
+        model_path = 'models/titanic_model.pkl'
+        with open(model_path, 'rb') as f:
             model = pickle.load(f)
         return model
     except FileNotFoundError:
@@ -160,7 +162,7 @@ def main():
         }
         
         features_df = pd.DataFrame(features_data)
-        st.dataframe(features_df, use_container_width=True)
+        st.dataframe(features_df, width='stretch')
         
         st.markdown("### Model Performance:")
         st.markdown("""
@@ -181,7 +183,7 @@ def main():
         }
         
         stats_df = pd.DataFrame(stats_data)
-        st.dataframe(stats_df, use_container_width=True)
+        st.dataframe(stats_df, width='stretch')
         
         st.markdown("### Survival Tips:")
         st.markdown("""
@@ -267,7 +269,9 @@ def main():
         passenger_info['is_alone'] = (passenger_info['family_size'] == 1).astype(int)
         
         # Display passenger information
-        st.dataframe(passenger_info.T, use_container_width=True)
+        # Convert all columns to string to avoid Arrow serialization issues
+        passenger_info_display = passenger_info.T.astype(str)
+        st.dataframe(passenger_info_display, width='stretch')
         
         # Feature importance (if available)
         if hasattr(model, 'feature_importances_'):
