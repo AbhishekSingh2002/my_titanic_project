@@ -294,7 +294,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Project Link**: [https://github.com/AbhishekSingh2002/my_titanic_project](https://github.com/AbhishekSingh2002/my_titanic_project)
 - **Author**: Abhishek Singh
-- **Email**: [your-singhabhishek.offc@gmail.com](mailto:singhabhishek.offc@gmail.com)
+- **Email**: [singhabhishek.offc@gmail.com](mailto:singhabhishek.offc@gmail.com)
 
 ---
 
